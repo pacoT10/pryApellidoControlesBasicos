@@ -12,6 +12,7 @@ namespace pryApellidoControlesBasicos
 {
     public partial class Form1 : Form
     {
+        Form2 frm=new Form2 ();
         public Form1()
         {
             InitializeComponent();
@@ -56,6 +57,11 @@ namespace pryApellidoControlesBasicos
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //lblCopiar.Text = textBox1.Text;
+        }
+
+        private void cmdSegundo_Click(object sender, EventArgs e)
+        {
+            frm.Show();
         }
     }
 

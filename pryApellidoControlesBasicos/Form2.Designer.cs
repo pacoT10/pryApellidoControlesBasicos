@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkpicante = new System.Windows.Forms.CheckBox();
-            this.chkmayo = new System.Windows.Forms.CheckBox();
             this.chkKet = new System.Windows.Forms.CheckBox();
+            this.chkmayo = new System.Windows.Forms.CheckBox();
+            this.chkpicante = new System.Windows.Forms.CheckBox();
             this.cmdAsignar = new System.Windows.Forms.Button();
             this.lblEscribirTexto = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.optRed = new System.Windows.Forms.RadioButton();
             this.optBlue = new System.Windows.Forms.RadioButton();
-            this.optGreen = new System.Windows.Forms.RadioButton();
+            this.cboAdicional = new System.Windows.Forms.ComboBox();
+            this.cmdElegir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,15 +54,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // chkpicante
+            // chkKet
             // 
-            this.chkpicante.AutoSize = true;
-            this.chkpicante.Location = new System.Drawing.Point(27, 30);
-            this.chkpicante.Name = "chkpicante";
-            this.chkpicante.Size = new System.Drawing.Size(61, 17);
-            this.chkpicante.TabIndex = 0;
-            this.chkpicante.Text = "picante";
-            this.chkpicante.UseVisualStyleBackColor = true;
+            this.chkKet.AutoSize = true;
+            this.chkKet.Location = new System.Drawing.Point(27, 102);
+            this.chkKet.Name = "chkKet";
+            this.chkKet.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkKet.Size = new System.Drawing.Size(32, 17);
+            this.chkKet.TabIndex = 2;
+            this.chkKet.Text = "k";
+            this.chkKet.UseVisualStyleBackColor = true;
             // 
             // chkmayo
             // 
@@ -73,16 +75,15 @@
             this.chkmayo.Text = "mayo";
             this.chkmayo.UseVisualStyleBackColor = true;
             // 
-            // chkKet
+            // chkpicante
             // 
-            this.chkKet.AutoSize = true;
-            this.chkKet.Location = new System.Drawing.Point(27, 102);
-            this.chkKet.Name = "chkKet";
-            this.chkKet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkKet.Size = new System.Drawing.Size(32, 17);
-            this.chkKet.TabIndex = 2;
-            this.chkKet.Text = "k";
-            this.chkKet.UseVisualStyleBackColor = true;
+            this.chkpicante.AutoSize = true;
+            this.chkpicante.Location = new System.Drawing.Point(27, 30);
+            this.chkpicante.Name = "chkpicante";
+            this.chkpicante.Size = new System.Drawing.Size(61, 17);
+            this.chkpicante.TabIndex = 0;
+            this.chkpicante.Text = "picante";
+            this.chkpicante.UseVisualStyleBackColor = true;
             // 
             // cmdAsignar
             // 
@@ -97,7 +98,7 @@
             // lblEscribirTexto
             // 
             this.lblEscribirTexto.AutoSize = true;
-            this.lblEscribirTexto.Location = new System.Drawing.Point(346, 225);
+            this.lblEscribirTexto.Location = new System.Drawing.Point(257, 197);
             this.lblEscribirTexto.Name = "lblEscribirTexto";
             this.lblEscribirTexto.Size = new System.Drawing.Size(35, 13);
             this.lblEscribirTexto.TabIndex = 2;
@@ -115,40 +116,49 @@
             this.optRed.AutoSize = true;
             this.optRed.Location = new System.Drawing.Point(245, 135);
             this.optRed.Name = "optRed";
-            this.optRed.Size = new System.Drawing.Size(85, 17);
+            this.optRed.Size = new System.Drawing.Size(47, 17);
             this.optRed.TabIndex = 4;
             this.optRed.TabStop = true;
-            this.optRed.Text = "radioButton1";
+            this.optRed.Text = "Rojo";
             this.optRed.UseVisualStyleBackColor = true;
+            this.optRed.CheckedChanged += new System.EventHandler(this.optRed_CheckedChanged);
             // 
             // optBlue
             // 
             this.optBlue.AutoSize = true;
             this.optBlue.Location = new System.Drawing.Point(336, 135);
             this.optBlue.Name = "optBlue";
-            this.optBlue.Size = new System.Drawing.Size(85, 17);
+            this.optBlue.Size = new System.Drawing.Size(45, 17);
             this.optBlue.TabIndex = 5;
             this.optBlue.TabStop = true;
-            this.optBlue.Text = "radioButton2";
+            this.optBlue.Text = "Azul";
             this.optBlue.UseVisualStyleBackColor = true;
             // 
-            // optGreen
+            // cboAdicional
             // 
-            this.optGreen.AutoSize = true;
-            this.optGreen.Location = new System.Drawing.Point(439, 135);
-            this.optGreen.Name = "optGreen";
-            this.optGreen.Size = new System.Drawing.Size(85, 17);
-            this.optGreen.TabIndex = 6;
-            this.optGreen.TabStop = true;
-            this.optGreen.Text = "radioButton3";
-            this.optGreen.UseVisualStyleBackColor = true;
+            this.cboAdicional.FormattingEnabled = true;
+            this.cboAdicional.Location = new System.Drawing.Point(245, 362);
+            this.cboAdicional.Name = "cboAdicional";
+            this.cboAdicional.Size = new System.Drawing.Size(121, 21);
+            this.cboAdicional.TabIndex = 7;
+            this.cboAdicional.SelectedIndexChanged += new System.EventHandler(this.cboAdicional_SelectedIndexChanged);
+            // 
+            // cmdElegir
+            // 
+            this.cmdElegir.Location = new System.Drawing.Point(446, 135);
+            this.cmdElegir.Name = "cmdElegir";
+            this.cmdElegir.Size = new System.Drawing.Size(75, 23);
+            this.cmdElegir.TabIndex = 8;
+            this.cmdElegir.Text = "Elegir";
+            this.cmdElegir.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.optGreen);
+            this.Controls.Add(this.cmdElegir);
+            this.Controls.Add(this.cboAdicional);
             this.Controls.Add(this.optBlue);
             this.Controls.Add(this.optRed);
             this.Controls.Add(this.textBox1);
@@ -176,6 +186,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton optRed;
         private System.Windows.Forms.RadioButton optBlue;
-        private System.Windows.Forms.RadioButton optGreen;
+        private System.Windows.Forms.ComboBox cboAdicional;
+        private System.Windows.Forms.Button cmdElegir;
     }
 }

@@ -32,6 +32,7 @@
             this.lblEjeX = new System.Windows.Forms.Label();
             this.lblOculto = new System.Windows.Forms.Label();
             this.lblCopiar = new System.Windows.Forms.Label();
+            this.cmdSegundo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEjeY
@@ -78,11 +79,22 @@
             this.lblCopiar.Text = "label1";
             this.lblCopiar.Click += new System.EventHandler(this.label1_Click);
             // 
+            // cmdSegundo
+            // 
+            this.cmdSegundo.Location = new System.Drawing.Point(239, 168);
+            this.cmdSegundo.Name = "cmdSegundo";
+            this.cmdSegundo.Size = new System.Drawing.Size(75, 23);
+            this.cmdSegundo.TabIndex = 5;
+            this.cmdSegundo.Text = "Ir";
+            this.cmdSegundo.UseVisualStyleBackColor = true;
+            this.cmdSegundo.Click += new System.EventHandler(this.cmdSegundo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 450);
+            this.Controls.Add(this.cmdSegundo);
             this.Controls.Add(this.lblCopiar);
             this.Controls.Add(this.lblOculto);
             this.Controls.Add(this.lblEjeX);
@@ -104,6 +116,7 @@
         private System.Windows.Forms.Label lblEjeX;
         private System.Windows.Forms.Label lblOculto;
         private System.Windows.Forms.Label lblCopiar;
+        private System.Windows.Forms.Button cmdSegundo;
     }
 }
 
