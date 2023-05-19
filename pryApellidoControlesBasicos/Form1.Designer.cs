@@ -31,7 +31,6 @@
             this.lblEjeY = new System.Windows.Forms.Label();
             this.lblEjeX = new System.Windows.Forms.Label();
             this.lblOculto = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCopiar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -69,14 +68,6 @@
             this.lblOculto.Visible = false;
             this.lblOculto.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblOculto_MouseMove);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(216, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // lblCopiar
             // 
             this.lblCopiar.AutoSize = true;
@@ -93,7 +84,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 450);
             this.Controls.Add(this.lblCopiar);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblOculto);
             this.Controls.Add(this.lblEjeX);
             this.Controls.Add(this.lblEjeY);
@@ -113,7 +103,6 @@
         private System.Windows.Forms.Label lblEjeY;
         private System.Windows.Forms.Label lblEjeX;
         private System.Windows.Forms.Label lblOculto;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCopiar;
     }
 }

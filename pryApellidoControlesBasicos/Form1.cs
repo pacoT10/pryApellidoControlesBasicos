@@ -55,7 +55,7 @@ namespace pryApellidoControlesBasicos
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            lblCopiar.Text = textBox1.Text;
+            //lblCopiar.Text = textBox1.Text;
         }
     }
 
